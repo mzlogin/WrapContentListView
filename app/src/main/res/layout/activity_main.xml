@@ -17,11 +17,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/fade_header" />
-            <ListView
+            <org.mazhuang.wrapcontentlistview.WrapContentListView
                 android:id="@+id/list_wrap_content"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
-            </ListView>
+            </org.mazhuang.wrapcontentlistview.WrapContentListView>
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
