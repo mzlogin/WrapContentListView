@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">WrapContentListView</string>
+
+    <string name="action_settings">Settings</string>
+
+    <string name="fade_header">Some complex layouts here...</string>
+    <string name="fade_footer">Some complex layouts here...</string>
+</resources>
