@@ -1,5 +1,5 @@
 # WrapContentListView
-A ListView which its height can wrap content even it is in a ScrollView
+A ListView which its height can wrap content even if it is nested in a ScrollView.
 
 Although it's not a good idea to nest a ListView in a ScrollView, in Android Studio, a warning will be given after inspections:
 
@@ -28,3 +28,5 @@ But if you really want to, this [WrapContentListView](/app/src/main/java/org/maz
     android:layout_height="wrap_content">
 </org.mazhuang.wrapcontentlistview.WrapContentListView>
 ```
+
+and you should call `notifyDataSetChanged();` after dataset in ListAdapter changed.

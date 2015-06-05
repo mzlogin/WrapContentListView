@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -14,13 +15,14 @@ import java.util.ArrayList;
 public class MainActivity extends Activity {
 
     private ListView mList;
+    private Button mBtnAddItem;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        ArrayList<ListItemModel> dataList = new ArrayList<ListItemModel>();
+        final ArrayList<ListItemModel> dataList = new ArrayList<ListItemModel>();
         dataList.add(new ListItemModel("item 1", 50));
         dataList.add(new ListItemModel("item 2", 60));
         dataList.add(new ListItemModel("item 3", 70));
@@ -36,6 +38,16 @@ public class MainActivity extends Activity {
 
         mList = (ListView)findViewById(R.id.list_wrap_content);
         mList.setAdapter(new MyListAdapter(dataList));
+
+        mBtnAddItem = (Button)findViewById(R.id.btn_add_item);
+        mBtnAddItem.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ListItemModel item = new ListItemModel("item " + (dataList.size() + 1), dataList.size() * 10 + 50);
+                dataList.add(item);
+                ((MyListAdapter)(mList.getAdapter())).notifyDataSetChanged();
+            }
+        });
     }
 
     class MyListAdapter extends ArrayAdapter<ListItemModel> {

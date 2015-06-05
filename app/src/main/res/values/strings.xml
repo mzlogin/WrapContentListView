@@ -3,6 +3,7 @@
 
     <string name="action_settings">Settings</string>
 
-    <string name="fade_header">Some complex layouts here...</string>
-    <string name="fade_footer">Some complex layouts here...</string>
+    <string name="fade_header">Header...Some complex layouts here...</string>
+    <string name="fade_footer">Footer...Some complex layouts here...</string>
+    <string name="add_item">Add Item</string>
 </resources>
